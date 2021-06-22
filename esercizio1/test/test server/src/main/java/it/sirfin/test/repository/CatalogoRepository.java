@@ -17,5 +17,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CatalogoRepository extends JpaRepository<Animale, Long> {
 
-    List<Animale> findAll();
 }

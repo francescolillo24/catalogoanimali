@@ -20,10 +20,10 @@ export class AppComponent {
 
   aggiungi() {
     let dto = new AnimaleDto();
-    dto.animaleDto = this.animale;
+    dto.animale = this.animale;
     this.http.post<ListaAnimaliDto>(this.url + "aggiungi", dto)
       .subscribe(a => {
-        this.animali = a.listaAnimali;
+       this.animali = a.listaAnimali;
         this.animale = new Animale();
       });
 
