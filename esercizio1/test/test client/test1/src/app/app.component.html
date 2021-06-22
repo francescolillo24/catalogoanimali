@@ -1,0 +1,24 @@
+<input type="text" placeholder="nome" [(ngModel)]="animale.nome">
+<input type="text" placeholder="razza" [(ngModel)]="animale.razza">
+<input type="text" placeholder="specie" [(ngModel)]="animale.specie">
+<input type="text" placeholder="gabbia" [(ngModel)]="animale.gabbia">
+
+<br> <br>
+<button (click)="aggiungi()">aggiungi</button>
+
+<table>
+
+  <tr>
+    <th>Nome</th>
+    <th>razza</th>
+    <th>specie</th>
+    <th>gabbia</th>
+  </tr>
+  <tr *ngFor="let a of animali">
+    <td>{{a.nome}}</td>
+    <td>{{a.razza}}</td>
+    <td>{{a.specie}}</td>
+    <td>{{a.gabbia}}</td>
+    <td> <button class="pulsante" (click)="elimina(a)">elimina</button></td>
+  </tr>
+</table>
